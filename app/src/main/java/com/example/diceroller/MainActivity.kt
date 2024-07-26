@@ -32,6 +32,9 @@ class MainActivity : AppCompatActivity() {
         val diceRoll2 = dice2.roll()
         val resultTextView2: TextView = findViewById(R.id.textView2)
         resultTextView2.text = diceRoll2.toString()
+
+        if (diceRoll1  == diceRoll2)
+            Toast.makeText(this, "vous avez gagne", Toast.LENGTH_SHORT).show()
     }
 
     class Dice(val numSides: Int) {
